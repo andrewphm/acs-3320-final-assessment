@@ -1,0 +1,266 @@
+
+/* Base styles */
+:root {
+  --lg-box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  width: 80%;
+  margin: auto;
+  max-width: 1200px;
+}
+
+/* Navbar Styles */
+#nav {
+  background-color: rgb(31 41 55 / 1);
+  color: white;
+  margin: 0;
+  position: sticky;
+  top: 0;
+  box-shadow: var(--lg-box-shadow);
+  z-index: 999999;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  max-width: 1200px;
+  padding: 15px 0;
+}
+
+#nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
+  font-family: monospace;
+}
+
+#nav a:hover {
+  color: #06c;
+}
+
+#nav a:first-child {
+  display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+  margin-right: 2rem;
+  font-family: 'Roboto Mono', monospace;
+}
+
+#nav a:first-child::before {
+  content: "";
+  background-image: url('./images/color-icons-12533.png');
+  height: 30px;
+  width: 30px;
+  background-size: cover;
+  display: block;
+}
+
+/* Banner Styles */
+#banner {
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+
+/* About Styles */
+#about-link {
+  text-decoration: none;
+  font-style: italic;
+  color: #4a8cd3;
+  white-space: nowrap;
+}
+
+#about-link::before {
+  content: "👉";
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+#about-link::after {
+  content: "👈";
+  margin-left: 3px;
+  text-decoration: none;
+}
+
+/* Popular Styles */
+#popular {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: var(--lg-box-shadow);
+  flex: 1;
+}
+
+.card img {
+  width: 100%;
+}
+
+/* Section Styles */
+section {
+  margin: 35px 0;
+}
+
+/* Color Swatches Styles */
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 2px;
+  margin: 15px 0;
+}
+
+.swatch {
+  padding-bottom: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.swatch:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+  border: 1px solid white;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Cart Styles */
+#cart {
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+}
+
+#items {
+  margin: 20px 0;
+}
+
+#items li {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 4fr;
+  width: 100
+}
+
+.items-header {
+  text-decoration: underline;
+}
+
+.items-header, #total {
+  font-weight: bold;
+}
+
+.update {
+  width: 50px;
+}
+
+button {
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.add-one {
+  border-radius: 100%;
+  height: 25px;
+  width: 25px;
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+.remove-one {
+  border-radius: 100%;
+  height: 25px;
+  width: 25px;
+  background-color: #FF9800; /* Orange */
+  color: white;
+}
+
+.remove {
+  height: 25px;
+  padding: 0 10px;
+  background-color: #F44336; /* Red */
+  color: white;
+  border-radius: 5px;
+
+}
+
+button:hover {
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+button:active {
+  transform: scale(1); /* Reset size when button is clicked */
+}
+
+/* Contact Form Styles */
+#contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-color {
+  height: 15px;
+  width: 15px;
+  display: inline-block
+}
+
+#contact form label {
+  margin-bottom: 10px;
+}
+
+#contact form input[type="text"],
+#contact form textarea {
+  padding: 5px;
+  width: 100%;
+}
+
+#contact form button {
+  padding: 15px;
+  width: 100%;
+  margin-top: 10px;
+  background-color: rgb(31 41 55 / 1);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Footer Styles */
+#footer {
+  color: #f4f4f4;
+  background-color: #555;
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
